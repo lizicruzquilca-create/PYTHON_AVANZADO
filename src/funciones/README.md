@@ -198,3 +198,29 @@ def resta (a,b):
 2. Especificaciones y caracteristicas de los parametros incluyendo sus tipos.  
 3. Restricciones de la funcion.  
 4. El valor que retorna y sus caracteristicas
+## type-hints(anotaciones de tipo)
+Nos permite indicar que tipo de dato tendra una variable, parametro y el valor de retorno de una función.
+Para utilizarlos debemos indicar el tipo de dato despues del separador `:`, en el caso del valor de retorno usaremos `->`luego el tipo de dato y finalmene el separador `:`que indica el inicio del bloque de codigo de la función.
+Las `anotaciones de tipo`son una herramienta que nos permite complementar la documentacion de nuestro codigo.
+**tenemos los siguientes**
+- **Simple**
+    - int -> numeros enteros
+    - float -> numeros decimales
+    - bool -> datos booleanos(verdadero o falso)
+    - str -> datos de tipo texto o cadena
+    - list -> listas `[]`
+    - tupla -> tuplas `()`
+    - dict -> diccionarios `{}`
+- **Compuestos**
+Existen casos en los que necesitamos mas expresividad en la *anotación de tipos* ¿QUE OCURRE si queremos indicar una *lista de cadenas* o un *conjunto de enteros*?
+- list[str] -> lista de cadenas de texto
+- list[int] -> lista de numeros enteros
+- dict[str,float] -> diccionario donde las claves son cadenas de texto y los valores son decimales.
+- list[str] -> lista de cadenas de texto
+- list[str] -> lista de cadenas de texto
+- **Mixtos o Multiples**
+En el caso que queramos indicar que un determinado parametro puede ser de un tipo o de otro tenemos que especificsrlo usando el operador `|`
+- tuple|dict -> puede ser dato de tipo tupla o diccionario
+- list[srt|int]-> lista cuyos elementos pueden ser cadena de texto o interos 
+- dict[srt|int,float|int] -> diccionario cuya clave puede ser cadena o entero  y cuyo valor puede ser decimal o entero.
+ 
