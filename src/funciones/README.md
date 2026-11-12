@@ -223,4 +223,11 @@ En el caso que queramos indicar que un determinado parametro puede ser de un tip
 - tuple|dict -> puede ser dato de tipo tupla o diccionario
 - list[srt|int]-> lista cuyos elementos pueden ser cadena de texto o interos 
 - dict[srt|int,float|int] -> diccionario cuya clave puede ser cadena o entero  y cuyo valor puede ser decimal o entero.
- 
+## closure (clausura)
+Una `closure`o `clausura`son funciones que establecen una funcion interior, o retornan una funcion estas funciones se caracterizan por recordar el valor de los argumentos que se le pasa.
+```python
+def multiplicando(n):
+    def multiplicador(m):
+        return n*m
+    return multiplicador
+```
