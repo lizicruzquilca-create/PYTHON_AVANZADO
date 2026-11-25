@@ -26,3 +26,4 @@ def potencia (n:int,p:int)-> int:
         int : resultado de la cantidad que se multiplico el numero
     """
     return resultado
+

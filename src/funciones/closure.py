@@ -1,21 +1,24 @@
-#crear una funcion que me permita ingresar nombre, apellido y me retorne un mensaje con ambos datos
-def creador(nombre:srt):
-    def apellido(ap:srt):
+## CREAR UNA FUNCION TIPO CLOSURE QUE ME PERMITA INNGRESAR NOMBRE ,APELLIDO Y ME RETORNE UN MENSAJE CON AMBOS DATOS .
+ 
+def creador (nombre:str):
+    def apellido(ap:str):
         return f"tu nombre es: {nombre} y tu apellido es {ap}"
     return apellido
-alumno1=creador("david") # def apellido(ap):return
-print(alumno("goliat"))
 
+alumno1=creador("David") # def apellido(ap): return
+alumno2=creador("Noemy")
+print(alumno1("Goliat"))
+print(alumno2("Maikel"))
 
-## Usando closure crear un función multiplicador que resiva por parametro el factor que devuelva una función que permita multiplicar cualquier numero por el factor
-def multiplicador(factor):
+## USANDO CLOSURE CREAR UN FUNCION MULTIPLICADOR QUE RESIVA POR PARAMETRO EL FACTOR QUE DEVUELVA UNA FUNCION QUE PERMITA MULTIPLICAR CUALQUIER
+#  NUMERO POR EL FACTOTR
+def multiplicador (factor):
     def multiplicar(numero):
-        return numero * factor
+        return numero*factor
     return multiplicar
 
-por_tres = multiplicador(3)
-por_cinco = multiplicador(10)
+doble=multiplicador(4)
+triple=multiplicador(6)
+print(doble(5))
+print(triple(5))
 
-print(por_tres(5))    # Salida: 15
-print(por_tres(8))    # Salida: 24
-print(por_cinco(4))    # Salida: 20

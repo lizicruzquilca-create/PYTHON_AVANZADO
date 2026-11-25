@@ -1,5 +1,3 @@
-#crear una funcion cuyos parametros seran un entero, una lista de enteros o flotantes y la funcion retornara una lista de enteros o flotantes
-def multiplicar_lista(factor: int, numeros: list[int | float]) -> list[int | float]:
+## CREAR UNA FUNCION CUYOS PARAMETROS SERAN UN ENTERO,UNA LISTA DE ENTEROS O FLOTANTES Y LA FUNCION RETORNARA UNA LISTA DE ENTEROS Y FLOTANTES 
+def mi_funcion(n:int,l:list[int|float])->list[int|float]:
     pass
-
-

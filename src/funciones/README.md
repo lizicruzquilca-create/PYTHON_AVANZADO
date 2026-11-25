@@ -62,8 +62,6 @@ def suma(a:int,b:float)->int:
     return [a,b,c,d]
 ```
 
-------------------------------------------------------------------------------------
-
 **ARGUMENTOS PARAMETROS**
 
 ```python
@@ -193,74 +191,184 @@ def resta (a,b):
     return a-b
 ```
 
-> [!WARNING] En el proceso de documentacion tener encuenta de incluir a lo menos lo siguiente:  
-1. Breve explicacion sobre que hace la funcion.  
-2. Especificaciones y caracteristicas de los parametros incluyendo sus tipos.  
-3. Restricciones de la funcion.  
-4. El valor que retorna y sus caracteristicas
-## type-hints(anotaciones de tipo)
-Nos permite indicar que tipo de dato tendra una variable, parametro y el valor de retorno de una función.
-Para utilizarlos debemos indicar el tipo de dato despues del separador `:`, en el caso del valor de retorno usaremos `->`luego el tipo de dato y finalmene el separador `:`que indica el inicio del bloque de codigo de la función.
-Las `anotaciones de tipo`son una herramienta que nos permite complementar la documentacion de nuestro codigo.
-**tenemos los siguientes**
-- **Simple**
-    - int -> numeros enteros
-    - float -> numeros decimales
-    - bool -> datos booleanos(verdadero o falso)
-    - str -> datos de tipo texto o cadena
-    - list -> listas `[]`
-    - tupla -> tuplas `()`
-    - dict -> diccionarios `{}`
-- **Compuestos**
-Existen casos en los que necesitamos mas expresividad en la *anotación de tipos* ¿QUE OCURRE si queremos indicar una *lista de cadenas* o un *conjunto de enteros*?
-- list[str] -> lista de cadenas de texto
-- list[int] -> lista de numeros enteros
-- dict[str,float] -> diccionario donde las claves son cadenas de texto y los valores son decimales.
-- list[str] -> lista de cadenas de texto
-- list[str] -> lista de cadenas de texto
-- **Mixtos o Multiples**
-En el caso que queramos indicar que un determinado parametro puede ser de un tipo o de otro tenemos que especificsrlo usando el operador `|`
-- tuple|dict -> puede ser dato de tipo tupla o diccionario
-- list[srt|int]-> lista cuyos elementos pueden ser cadena de texto o interos 
-- dict[srt|int,float|int] -> diccionario cuya clave puede ser cadena o entero  y cuyo valor puede ser decimal o entero.
-## closure (clausura)
-Una `closure`o `clausura`son funciones que establecen una funcion interior, o retornan una funcion estas funciones se caracterizan por recordar el valor de los argumentos que se le pasa.
+> [!WARNING] En el proceso de documentacion tener encuenta de incluir a lo menos lo siguie:
+
+> 1. Breve explicacion sobre que hace la funcion.
+> 2. Especificaciones y caracteristicas de los parametros incluyendo sus tipos.
+> 3. Restricciones de la funcion.  
+> 4. El valor que retorna y sus caracteristicas.
+
+## TYPE_HINTS (ANOTACIONES DE TIPO)
+
+Nos permite indicar que tipo de dato que tendra una variable,parametro y el valor de retorno de una funcion.
+Para utilizarlos debemos de indicar el tipo de dato despues del separador `:`, en el caso de valor retorno usaremos `->` luego el tipo de dato y finalmente el separador `:` que indica el inicio del bloque de codigo de la funcion.
+Las `anotaciones de tipo` son una herramienta que nos permite complementar la documentacion de nuestro codigo.
+**TENEMOS LOS SIGUIENTES**
+
+- **SIMPLES**
+   -int -> numero enteros
+   -float -> numeros decimales
+   -bool -> datos boleanos (verdad o falso)
+   -str -> datos de tipo texto o cadena
+   -list -> listas `[]`
+   -tuple -> tuplas `()`
+   -dict -> diccionarios `{}`
+
+- **COMPUESTOS**
+   Existen casos en los que necesitamos mas expresividad en la *anotacion de tipos* ¿que ocurre si queremos indicar una *lista de cadenas* o un *conjunto de enteros*.?
+   -list[str] -> lista de cadenas de texto.
+   -list[int] -> lista de numeros enteros.
+   -dict[str,float] -> diccionario donde las claves son cadenas de texto y los valores son flotantes/decimales.
+
+- **MULTIPLES**
+  En el caso que queramos indicar de un determinado parametro puede ser de un `tipo o de otro` tenemos que especificarlo usando el operador `|`
+  - tuple|dict -> puede ser dato de tipo tupla o diccionario
+  - list[str|int] -> lista cuyos elementos pueden ser cadenas de texto o enteros.
+  - dicts[str|int,float|int]-> diccionario cuya clave puede ser cadena o entero cuyo valor puede ser flotante o entero.
+
+## CLOSURE
+
+Una `closure` o `clausura` sus funciones que establecen una funcion interior ,o retornan un funcion estas funciones se caracterisan por recordar el valor de los argumentos que se le pasa .
+
 ```python
-def multiplicando(n):
-    def multiplicador(m):
-        return n*m
+def producto(n):
+    def multiplicador 
+    return n*m
     return multiplicador
 ```
-## PROGRMACIÓN FUNCIONAL
-Python es un lenguaje de programacion multiparadigma, y uno de sus paradigmas que mejor funcion tienen es la `funcional`
-Python usa tres `map()`, `filter()`
 
-## Programacion funcional 
-python es un lenguaje de programacion multiparadicma, y uno de sus pradicmas que mejor funcion tienen en la funcional.
-python usa tres map(),filter(),reduce(), pero nosotros solo usaremos mao() y filter().
-estas funciones integradas de python sirven para procesar y trasformar solecciones de datos (listas , diccionarios ) de manera muy eficiente:
+## PROGRAMACION FUNCIONAL
 
-> [!tip] importante:
-> las funciones map() y filter resiven dos parametros primero la funcion a ejecutar y segunto el iterable en que va actuar. la funcion que recibe como parametro puede ser normal (def) o puede ser aninima(lambda).
+python es un ineguaje de programacion multiparadigma que mejor funcion tienen es la funcional.
+python usa tres `map()`,`filter()`,`reduce()`, pero nosotros solo usarmos `map()`,`filter()`.
+estas funciones integradas de python siirven para procesar y transformar colecciones de datos (listas,diccionarios) de manera muy eficiente:
+>[!TIP] Importante:
+> las funciones map()`y`filter() resiven dos parametros primero la funcion a ejecutar y segundo el iterable en que va actuar. la funcion que recive como parametro puede ser normal (`def`) o puede ser anonima (`lambda`).
 
-### 1. map()
-mao aplica una funcion especifico a cada una de los elementos de una coleccion (iterable) y devuelve un nuevo iterable con los resultados.
-python
-# de una lista de numeros deseamos calcular la potencia de cada numero 
-numeros :lista[int]=[2,4,6,8,7]
-def f(x):
+### 1. MAP ()
+
+map aplica una funcion especifica a cada uno de los elementos de una coleccion (iterable) y devuelve un nuevo iterable con los resultados.
+
+```python
+# de una lista de numeros deseamos calcular la potencia de cada numero
+numero:list[int]=[2,4,6,8,7]
+## cuando deceamos trabajar con funciones anoonima tenemos que declarar primero la funcion antes de pararla por parametro
+def f(X):
     return x**2
-## una vez creada pasamos la funcion como parametro
-map (f,numeros)
-## cuando deseamos trabajar con funciones aninimas usamos lambda dentro del parametro 
+## una ves creada pasamos la funcion como parametro
+map(f,numeros)
+## cuando deseamos trabajar con funciones anonimas usamos lambda dentro del parametro
 map(lambda x:x**2,numeros)
 
-### 2. filter ()
-filter pasa cada elemento de una coleccion por una funcion y solo se queda con aquellos elementos donde la funcion devuelva true (es decir, filtra los datos segun una condicion ).
-python
-# imagina que tienes una lista de numeros y solo quieres quedarte con los numeros pares 
-numeros:list[int]=[2,7,8,20,4,3,9,12,11,16,17]
-filter(lambda n:n % 2== 0, numeros)
+### 2. filter()
+filter pasa cada elemento de una coleccion por una funcion y solo se queda con aquellos elementos dende la funcion devuelva true (es decir, filtra los datos segun una condicion).
+```
 
-> [!WARMING] Nota importante
-> Tanto map() como filter() no devuelven listass directamente, sino interado. Esto es para ahorrar memoria(evaluacion perezosa o lazy evaluation). si quieres ver el resultado como una listas tradicional, siempre debes envolver en list().
+```python
+# imagina que tienes una lista de numeros y solo quieres quedarte con los numeros pares.
+numeros:list[int]=[2,7,8,20,4,3,9,12,11,16,17]
+filter(lambda n:n % 2== 0,numeros)
+```
+
+>[!WARNING]nota importante
+> tanto map()`como`filter() no devuelven listas directamente, si no iteradores. esto es para ahorrar memoria (evaluacion perezosa o lazy evaluacion). si quieres ver el resultado como una lista tradicional, siempre debes envolver en list.
+
+## COMPRENSION DE LISTA
+
+List Comprehension es una forma sencilla y rápida de crear nuevas listas utilizando una sola línea de código, en lugar de escribir muchas líneas con el ciclo FOR.
+
+1. List Comprehension básico
+
+Permite crear una nueva lista realizando operaciones con los elementos de otra lista.
+
+Ejemplo: elevar los números al cuadrado.
+
+```python
+numeros = [1, 2, 3, 4, 5]
+cuadrados = [x**2 for x in numeros]
+print(cuadrados)
+
+Resultado: "[1, 4, 9, 16, 25]"
+```
+
+2. List Comprehension con IF
+
+Permite seleccionar elementos que cumplen una condición.
+
+Ejemplo: obtener solamente los números pares.
+```python
+numeros = [1, 2, 3, 4, 5]
+pares = [x for x in numeros if x % 2 == 0]
+print(pares)
+
+Resultado: "[2, 4]"
+```
+
+3. List Comprehension anidado
+
+Permite crear listas dentro de otras listas, como una matriz, utilizando dos ciclos FOR.
+
+Ejemplo:
+```python
+matriz = [[j for j in range(1, 4)] for i in range(3)]
+print(matriz)
+
+Resultado:
+
+[[1, 2, 3],
+ [1, 2, 3],
+ [1, 2, 3]]
+```
+Conclusión:
+
+List Comprehension es una herramienta de Python que permite crear listas, realizar operaciones y aplicar condiciones de manera más fácil, rápida y con menos líneas de código.
+
+## DICCIONARIOS POR COMPRENSION
+
+Los diccionarios por comprensión permiten crear nuevos diccionarios de manera sencilla y rápida utilizando una sola línea de código. Se pueden crear elementos con una clave y un valor a partir de otros datos.
+
+1. Diccionario básico por comprensión
+
+Permite crear un diccionario a partir de una lista.
+
+Ejemplo:
+```python
+numeros = [1, 2, 3, 4, 5]
+cuadrados = {x: x**2 for x in numeros}
+print(cuadrados)
+
+Resultado:
+
+{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+```
+2. Diccionario con IF
+
+Permite agregar solamente los elementos que cumplen una condición.
+
+Ejemplo: guardar solo los números pares.
+```python
+numeros = [1, 2, 3, 4, 5]
+pares = {x: x for x in numeros if x % 2 == 0}
+print(pares)
+
+Resultado:
+
+{2: 2, 4: 4}
+```
+3. Diccionario con operaciones
+
+Permite realizar operaciones con los valores al crear el diccionario.
+
+Ejemplo: multiplicar cada número por dos.
+```python
+numeros = [1, 2, 3]
+dobles = {x: x*2 for x in numeros}
+print(dobles)
+
+Resultado:
+
+{1: 2, 2: 4, 3: 6}
+``` 
+Conclusión:
+
+Los diccionarios por comprensión permiten crear diccionarios en una sola línea de código, utilizando condiciones y operaciones. Su estructura utiliza llaves "{}" y permite guardar datos mediante claves y valores.
